@@ -1,6 +1,6 @@
 <html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link rel="stylesheet" href="/index.css">
+    <head>
+        <link rel="stylesheet" href="index.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/0505d45c82.js" crossorigin="anonymous"></script>
@@ -9,36 +9,37 @@
         
         <div class="container">
             <header>
-                <div class="headings"></div>
+                <div class="headings">
                     <h1>Available Cars</h1>
                     <p>There are 15 cars that match your criteria</p>
                 </div>
-                    <div class="options">
-                        <div class="icons">
-                            <input type="text" class="search">
-                            <img src="./assets/menu.svg" class="menu">
+                <div class="options">
+                    <div class="icons">
+                        <input type="text" class="search">
+                        <img src="./assets/menu.svg" class="menu">
+                    </div>
+                
+                    <div class="filter">
+                        <div class="chk-container">
+                            <input type="checkbox" id="new">
+                            <label for="new">New cars</label>
                         </div>
-                    
-                        <div class="filter">
-                            <div class="chk-container">
-                                <input type="checkbox" id="new">
-                                <label for="new">New cars</label>
-                            </div>
-                            <div class="chk-container">
-                                <input type="checkbox" id="used">
-                                <label for="used">Used cars</label>
-                            </div>
-                            <div class="chk-container">
-                                <input type="checkbox" id="dealer">
-                                <label for="dealer">Dealership</label>
-                            </div>
-                            <div class="chk-container">
-                                <input type="checkbox" id="owner">
-                                <label for="owner">For sale by owner</label>
-                            </div>
+                        <div class="chk-container">
+                            <input type="checkbox" id="used">
+                            <label for="used">Used cars</label>
+                        </div>
+                        <div class="chk-container">
+                            <input type="checkbox" id="dealer">
+                            <label for="dealer">Dealership</label>
+                        </div>
+                        <div class="chk-container">
+                            <input type="checkbox" id="owner">
+                            <label for="owner">For sale by owner</label>
                         </div>
                     </div>
+                </div>
             </header>
+            
             <main>
                 <div class="labels">
                     <p class="lbl-details">Car Details</p>
@@ -52,7 +53,7 @@
                     <p class="car-location">1944 Scrimba Ln<br>Youngstown, OH 44481</p>
                     <div class="cols-2">
                         <p class="car-price">$17,400</p>
-                        <i class="far fa-heart fa-lg"></i>
+                        <i onclick="changeHeart(this)" class="far fa-heart fa-lg"></i>
                     </div>
                 </div>
                 
@@ -113,8 +114,8 @@
 
                 
             </main>
-        </div> 
-
+        </div>
+        
         <script src="index.js"></script>
     </body>
 </html>
